@@ -48,10 +48,12 @@ def call_gemini_model(prompt, model="gemini-2.5-flash-lite"):
     return f"[ERROR] All API keys failed. Last error: {str(last_error)}"
 
 
-@app.route("/api", methods=["GET", "POST"])
+@app.route("/api")
 def index():
     return "Hello World!"
-
+@app.route("/")
+def index1():
+    return "Hi there"
 
 
 @app.route("/api/answerQuestion", methods=["POST"])
