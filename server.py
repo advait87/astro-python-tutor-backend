@@ -85,7 +85,7 @@ def getQuestion():
     query = ""
     if len(question_data) == 0:
         query = first_question_query
-    elif len(question_data) > 2:
+    elif len(question_data) > 6:
         print("[INFO] Quiz is complete")
         return {"message": "quiz_complete"}
     else:
